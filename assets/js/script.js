@@ -12,41 +12,19 @@ const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 // Função de preenchimento da seção about
 async function getAboutGitHub() {
-  if (!about) return;
+  const followersEl = document.getElementById("github-followers");
+  const reposEl = document.getElementById("github-repos");
+  const linkEl = document.getElementById("github-link");
+
+  if (!followersEl || !reposEl || !linkEl) return;
+
   try {
     const resposta = await fetch("https://api.github.com/users/jrs-neto");
     const perfil = await resposta.json();
 
-    about.innerHTML = "";
-
-    about.innerHTML = `
-      <article class="about-content">
-        <h2 class="about-title">Sobre Mim</h2>
-        <p class="about-text">Sou desenvolvedor em formação, com foco em Front-end e Full Stack, atualmente cursando Análise e Desenvolvimento de Sistemas e certificado como AWS Cloud Practitioner.
-Atualmente, venho me especializando em JavaScript (ES6+), TypeScript, React e Node.js, desenvolvendo aplicações completas com consumo e criação de APIs REST, além de trabalhar com bancos de dados relacionais como PostgreSQL e MySQL. Também possuo experiência com serviços AWS, como S3, EC2, Lambda e IAM.
-Tenho experiência prática através de projetos acadêmicos, pessoais e também como desenvolvedor Full Stack voluntário em um time internacional, onde desenvolvi um chatbot com Node.js e TypeScript, implementei uma arquitetura serverless na AWS e automatizei processos internos.
-</p>
-
-        <div class="about-side">
-          <div class="data-container">
-            <div class="data-item">
-              <span class="data-number">${perfil.followers}</span>
-              <span class="data-label">Seguidores</span>
-            </div>
-
-            <div class="data-item">
-              <span class="data-number">${perfil.public_repos}</span>
-              <span class="data-label">Repositórios</span>
-            </div>
-          </div>
-
-          <div class="buttons-container about-buttons">
-            <a href="${perfil.html_url}" target="_blank" class="botao">Acessar GitHub</a>
-            <a href="https://drive.google.com/drive/folders/1D8wHplySJvqn6GL273GQbGKQfpA0LRTn?usp=sharing" target="_blank" class="botao-outline">Ver Currículo</a>
-          </div>
-        </div>
-      </article>
-    `;
+    followersEl.textContent = perfil.followers;
+    reposEl.textContent = perfil.public_repos;
+    linkEl.href = perfil.html_url;
   } catch (error) {
     console.error("Erro ao buscar dados no GitHub", error);
   }
@@ -239,30 +217,6 @@ if (formulario) {
 // Executar funções
 getAboutGitHub();
 getProjectsGitHub();
-
-// Efeito de digitação no logo "Coding"
-const textToType = "Coding";
-const typingOutput = document.getElementById("titulo");
-let indexTyping = 0;
-
-function typeWriter() {
-  if (!typingOutput) return;
-
-  if (indexTyping < textToType.length) {
-    if (indexTyping === 0) typingOutput.textContent = "";
-    typingOutput.textContent += textToType.charAt(indexTyping);
-    indexTyping++;
-    setTimeout(typeWriter, 200);
-  } else if (indexTyping === textToType.length) {
-    setTimeout(() => {
-      indexTyping = 0;
-      typeWriter();
-    }, 2500);
-    indexTyping++;
-  }
-}
-
-typeWriter();
 
 // Dark Mode Toggle Logic
 const themeToggle = document.getElementById("themeToggle");

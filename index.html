@@ -2,11 +2,9 @@
 <html lang="pt-br">
 
 <head>
-  <!-- Fontes do Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- Fonte do Google - Fira Sans -->
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,30 +15,23 @@
 
   <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg">
 
-  <!-- SWIPER CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
-  <!-- CSS Principal da Página -->
   <link rel="stylesheet" href="./assets/css/style.css">
-  <title>Coding - José Rodrigues</title>
+  <title>Portfólio - José Rodrigues</title>
 </head>
 
 <body>
-  <!-- Cabeçalho da página -->
   <header>
     <div class="menu-content">
-      <!-- Título do Cabeçalho -->
-      <a href="index.html" id="titulo">Coding</a>
+      <a href="index.html" id="titulo">Portfólio</a>
 
-      <!-- Menu de Navegação -->
       <nav style="display: flex; align-items: center; gap: 1rem;">
         <ul class="menu-list">
           <li><a href="#hero">Início</a></li>
           <li><a href="#about">Sobre</a></li>
           <li><a href="#projects">Projetos</a></li>
           <li><a href="#contact">Contatos</a></li>
-          <li><a href="https://drive.google.com/drive/folders/1D8wHplySJvqn6GL273GQbGKQfpA0LRTn?usp=sharing"
-              target="_blank" class="botao-nav">Currículo</a></li>
         </ul>
         <button id="themeToggle" class="theme-button" aria-label="Alternar Tema Escuro">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
@@ -52,22 +43,13 @@
     </div>
   </header>
 
-  <!-- Seção Principal da página -->
   <main>
-    <!-- Seção Hero -->
     <section id="hero" class="section-container hero-container">
 
-      <!-- Imagem da Seçao Hero -->
-      <figure class="hero-image">
-        <img src="./assets/img/perfil.png" alt="Foto do autor do site">
-      </figure>
-
-      <!-- Boas Vindas -->
       <article class="hero-content">
-        <h1>Olá, eu sou José Rodrigues</h1>
-        <h2>Desenvolvedor Full Stack</h2>
-        <hr class="hero-divider">
-        <p>Especialista em unir o desenvolvimento Full Stack à infraestrutura em nuvem.</p>
+        <span>👋 Olá, eu sou José Rodrigues</span>
+        <h1>Desenvolvedor Full Stack</h1>
+        <p>Especialista em unir o desenvolvimento Full Stack, <br> à infraestrutura em nuvem.</p>
 
         <div class="buttons-container">
           <a href="#about" class="botao">Saiba Mais</a>
@@ -75,42 +57,156 @@
         </div>
       </article>
 
+      <figure class="hero-image float-animation">
+        <img src="./assets/img/foto_dev_man.png" alt="Foto do autor do site">
+      </figure>
+
     </section>
 
 
-    <!-- Seção About -->
     <section id="about" class="section-container about-container">
+      <h2 class="about-title">Sobre Mim</h2>
+
+      <div class="about-content">
+        <figure class="about-image">
+          <img src="./assets/img/perfil.png" alt="Foto de Perfil - José Rodrigues">
+        </figure>
+
+        <div class="about-info">
+          <p class="about-text">
+            Desenvolvedor Full Stack e Cloud com foco em React, TypeScript, Node.js e AWS.
+            Possuo uma base sólida em infraestrutura e suporte técnico, o que me permite ir além do código e construir
+            soluções completas, escaláveis e bem estruturadas.
+            Ao longo da minha trajetória, desenvolvi adaptabilidade, persistência e colaboração em equipe, aplicadas na
+            criação de sistemas com foco em qualidade e boas práticas.
+          </p>
+
+          <div class="about-grid">
+            <div class="info-block">
+              <h3>
+                <svg class="info-icon-svg" viewBox="0 0 24 24">
+                  <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z" />
+                </svg>
+                Formação
+              </h3>
+              <p>Análise e Desenvolvimento de Sistemas (Em andamento)</p>
+            </div>
+
+            <div class="info-block">
+              <h3>
+                <svg class="info-icon-svg" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                </svg>
+                Idiomas
+              </h3>
+              <p>Inglês (Intermediário / B2)<br>Francês (Básico / A1)</p>
+            </div>
+
+            <div class="info-block">
+              <h3>
+                <svg class="info-icon-svg" viewBox="0 0 24 24">
+                  <path
+                    d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zm0 13.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z" />
+                </svg>
+                Formação Complementar
+              </h3>
+              <ul>
+                <li>Bootcamp Full Stack JavaScript - Generation Brasil</li>
+                <li>Arquiteto de Soluções AWS - Escola da Nuvem</li>
+                <li>AWS re/Start - Escola da Nuvem</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h3>
+                <svg class="info-icon-svg" viewBox="0 0 24 24">
+                  <path
+                    d="M21 2H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7l-2 3v1h8v-1l-2-3h7c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 12H3V4h18v10z" />
+                </svg>
+                Cursos
+              </h3>
+              <ul>
+                <li>JavaScript ES6+ / HTML / CSS - Origamid</li>
+                <li>AWS Cloud Practitioner Essentials - AWS</li>
+                <li>Fundamentos Técnicos da AWS - AWS</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="about-cards">
+
+            <a id="github-link" href="https://github.com/jrs-neto" target="_blank"
+              class="about-card github-card-divided">
+              <div class="github-card-header">
+                <svg class="github-icon-svg" viewBox="0 0 24 24">
+                  <path
+                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                </svg>
+                <span class="github-title-text">Acessar GitHub</span>
+              </div>
+
+              <div class="github-card-stats">
+                <div class="stat-item-complex">
+                  <svg class="stat-icon-svg" viewBox="0 0 24 24">
+                    <path
+                      d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                  </svg>
+                  <span id="github-followers" class="stat-label-complex">--</span>
+                  <span class="stat-label-complex">seguidores</span>
+                </div>
+                <span class="stat-separator-dot">•</span>
+                <div class="stat-item-complex">
+                  <svg class="stat-icon-svg" viewBox="0 0 24 24">
+                    <path
+                      d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                  </svg>
+                  <span id="github-repos" class="stat-label-complex">--</span>
+                  <span class="stat-label-complex">repositórios</span>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://drive.google.com/drive/u/1/folders/1D8wHplySJvqn6GL273GQbGKQfpA0LRTn" target="_blank"
+              class="about-card cv-card-v2">
+              <svg class="cv-icon-svg" viewBox="0 0 24 24">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="16" y1="13" x2="8" y2="13" />
+                <line x1="16" y1="17" x2="8" y2="17" />
+                <polyline points="10 9 9 9 8 9" />
+              </svg>
+              <span class="cv-title-text">Ver Currículo</span>
+            </a>
+
+          </div>
+        </div>
+      </div>
     </section>
 
 
-    <!-- Seção Projects -->
     <section id="projects" class="section-container projects-container">
 
       <h2>Meus Projetos</h2>
 
-      <!-- Swiper Container -->
       <div class="swiper projects-swiper">
         <div class="swiper-wrapper">
 
         </div>
 
-        <!-- Botões de Navegação -->
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
 
-        <!-- Paginação -->
         <div class="swiper-pagination"></div>
 
       </div>
 
     </section>
 
-    <!-- Seção Contact -->
     <section id="contact" class="section-container contact-container">
 
       <h2 class="contact-title">Contato</h2>
 
-      <!-- Informações à Esquerda -->
       <article class="contact-info">
         <p class="contact-text">Entre em contato comigo:</p>
 
@@ -139,7 +235,6 @@
         </div>
       </article>
 
-      <!-- Formulário à Direita -->
       <form id="formulario" action="https://formsubmit.co/af1c8d2a54067294d71d9c19b5b7c2d2" method="POST">
         <input type="hidden" name="_next" value="https://jrs-neto.github.io/portfolio/success.html">
         <input type="hidden" name="_captcha" value="false">
@@ -166,15 +261,12 @@
     </section>
   </main>
 
-  <!-- Rodapé da página -->
   <footer>
     Desenvolvido por José Rodrigues - 2026
   </footer>
 
-  <!-- SWIPER JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <!-- Script JavaScript principal da página -->
   <script src="./assets/js/script.js"></script>
 </body>
 
