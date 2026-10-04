@@ -6,49 +6,61 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- Fonte do Google - Fira Sans -->
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
   <meta charset="UTF-8">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta name="author" content="José Rodrigues">
   <meta name="description"
-    content="Portfólio do José Rodrigues, desenvolvedor Full Stack especializado em criar experiências digitais incríveis. Conheça meus projetos e entre em contato.">
+    content="Mensagem enviada com sucesso para José Rodrigues.">
   <meta name="robots" content="index, follow">
 
   <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg">
 
   <!-- CSS Principal da Página -->
   <link rel="stylesheet" href="./assets/css/style.css">
-  <title>Coding - José Rodrigues</title>
+  <title>Mensagem Enviada - José Rodrigues</title>
 
 </head>
 
 <body>
 
-  <!-- Cabeçalho da Página (header) -->
   <header>
     <div class="menu-content">
-      <!-- Título do Cabeçalho -->
-      <a href="index.html" id="titulo">Coding</a>
+      <div class="brand">
+        <a href="index.html" class="brand-name">José Rodrigues</a>
+        <span class="header-role">Full Stack &amp; Cloud Computing</span>
+      </div>
 
-      <!-- Menu de Navegação -->
       <nav style="display: flex; align-items: center; gap: 1rem;">
-        <ul class="menu-list">
-          <li><a href="index.html#hero">Início</a></li>
-          <li><a href="index.html#about">Sobre</a></li>
-          <li><a href="index.html#projects">Projetos</a></li>
-          <li><a href="index.html#contact">Contato</a></li>
-          <li><a href="https://drive.google.com/drive/folders/1D8wHplySJvqn6GL273GQbGKQfpA0LRTn?usp=sharing" target="_blank" class="botao-nav">Currículo</a></li>
-        </ul>
-        <button id="themeToggle" class="theme-button" aria-label="Alternar Tema Escuro">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        <button
+          id="menu-toggle"
+          class="menu-toggle"
+          aria-label="Abrir menu de navegação"
+          aria-expanded="false"
+          aria-controls="menu-list"
+        >
+          <!-- Ícone hamburger -->
+          <svg class="icon-hamburger" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6"  x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+          <!-- Ícone X (fechar) -->
+          <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6"  x2="6"  y2="18" />
+            <line x1="6"  y1="6"  x2="18" y2="18" />
           </svg>
         </button>
+
+        <ul id="menu-list" class="menu-list">
+          <li><a href="index.html#hero">Início</a></li>
+          <li><a href="index.html#about">Sobre</a></li>
+          <li><a href="index.html#stacks">Stacks</a></li>
+          <li><a href="index.html#projects">Projetos</a></li>
+          <li><a href="index.html#contact">Contato</a></li>
+        </ul>
+
       </nav>
     </div>
   </header>
@@ -59,7 +71,7 @@
       <article class="success-content">
 
         <figure class="success-icon">
-          <img src="./assets/img/success.svg" alt="Ilustração de sucesso" class="float-animation" width="20%">
+          <img src="./assets/img/success.svg" alt="Ilustração de sucesso" class="float-animation">
         </figure>
 
         <h1>E-mail enviado com Sucesso!</h1>
@@ -70,12 +82,11 @@
     </section>
   </main>
 
-  <!-- Rodapé da Página (footer) -->
   <footer>
     Desenvolvido por José Rodrigues - 2026
   </footer>
 
-  <!-- Script JavaScript principal da página -->
-  <script src="./assets/js/script.js"></script>
+  <script type="module" src="./assets/js/script.js"></script>
+
 </body>
 </html>

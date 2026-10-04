@@ -1,0 +1,141 @@
+/* Stacks Section */
+
+#stacks {
+  background-color: var(--bg-main);
+}
+
+.stacks-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stacks-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  margin-bottom: var(--spacing-sm);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--text-main);
+  width: 100%;
+}
+
+.stacks-title::before,
+.stacks-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 0 var(--spacing-xl);
+}
+
+.stacks-subtitle {
+  margin-bottom: var(--spacing-2xl);
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  max-width: 36rem;
+  line-height: 1.65;
+  text-align: center;
+}
+
+.stacks-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-lg);
+  align-items: start; /* Permite alturas variáveis */
+  width: 100%;
+}
+
+/* Card Stacks */
+.stack-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--spacing-md);
+  transition: var(--transition-default);
+  text-align: left;
+}
+
+.stack-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-hover);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.stack-card-title {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: var(--spacing-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Chips Container (Flexbox & Wrap) */
+.chips-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+/* Chip individual */
+.tech-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  color: var(--text-main);
+  background-color: var(--bg-hover-translucent);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 0.5rem 0.85rem;
+  height: 2.85rem;
+  transition: var(--transition-default);
+}
+
+.tech-chip:hover {
+  background-color: var(--bg-hover-translucent);
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.tech-chip i {
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech-chip span {
+  font-weight: 500;
+  font-size: var(--text-sm);
+  white-space: nowrap;
+}
+
+/* Responsividade específica da seção Stacks */
+@media screen and (max-width: 992px) {
+  .stacks-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .stacks-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  .stacks-title::before,
+  .stacks-title::after {
+    margin: 0 var(--spacing-sm);
+  }
+}

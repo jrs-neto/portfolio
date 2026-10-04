@@ -1,0 +1,77 @@
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 5rem);
+  padding-top: var(--spacing-xl);
+  padding-bottom: var(--spacing-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 1fr);
+  gap: var(--spacing-2xl);
+  align-items: center;
+  width: 100%;
+  max-width: 72rem;
+  position: relative;
+  z-index: 2;
+}
+
+section#hero {
+  border-top: 1px solid var(--border-color);
+  padding-top: var(--spacing-xl);
+  background-color: var(--bg-main);
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.hero-greeting {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.hero-title {
+  font-size: 3.75rem;
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  max-width: 36rem;
+  margin-bottom: var(--spacing-xl);
+}
+
+/* Ajustes específicos para a imagem de perfil na seção Hero */
+.hero-grid .about-image {
+  height: auto;
+  align-self: center;
+  width: 100%;
+  max-width: 350px;
+}
+
+.hero-grid .about-image img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 95%);
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 95%);
+}
