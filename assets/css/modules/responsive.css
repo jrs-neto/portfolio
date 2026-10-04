@@ -1,0 +1,284 @@
+/* Responsividade Geral */
+
+@media screen and (max-width: 1024px) {
+  .section-container {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .section-container h1 {
+    font-size: var(--text-3xl);
+  }
+
+  .section-container h2 {
+    font-size: var(--text-2xl);
+  }
+
+  .section-container p {
+    font-size: var(--text-base);
+  }
+
+  .section-container span {
+    font-size: var(--text-lg);
+  }
+
+  .success-content h1 {
+    font-size: var(--text-xl);
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* 1. Brand à esquerda, botão hamburger à direita */
+  .menu-content {
+    justify-content: space-between;
+    position: relative;
+  }
+
+  /* 2. Brand alinhado à esquerda em mobile */
+  .brand {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .brand-name {
+    margin-bottom: 0.1rem;
+    font-size: var(--text-xl);
+  }
+
+  .header-role {
+    font-size: 0.75rem;
+  }
+
+  /* 3. Exibe o botão hamburger */
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* 4. Menu mobile: oculto por padrão, dropdown abaixo do header */
+  .menu-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background-color: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+    padding: var(--spacing-xs) 0;
+    z-index: 999;
+  }
+
+  .menu-list.menu-open {
+    display: flex;
+  }
+
+  .menu-list li {
+    width: 100%;
+  }
+
+  .menu-list a {
+    display: block;
+    padding: 0.875rem var(--spacing-md);
+    font-size: var(--text-base);
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .menu-list li:last-child a {
+    border-bottom: none;
+  }
+
+  /* Hero — Tablet: stack columns, reduce spacing */
+  .hero-container {
+    text-align: center;
+    padding-top: var(--spacing-lg);
+    padding-bottom: var(--spacing-lg);
+  }
+
+  .hero-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    align-items: center;
+  }
+
+  .hero-content {
+    align-items: center;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+    max-width: 22ch;
+    text-align: center;
+  }
+
+  .hero-greeting {
+    font-size: 1.1rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .buttons-container {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .hero-container .botao,
+  .hero-container .botao-outline {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+    white-space: nowrap;
+  }
+
+
+  .projects-container {
+    margin: var(--spacing-lg) auto 0;
+  }
+
+  .projects-swiper {
+    margin: 0;
+    padding: var(--spacing-sm) var(--spacing-lg) 2.5rem;
+  }
+
+  .project-card {
+    width: 100%;
+    height: auto;
+    min-height: unset;
+    max-height: unset;
+    max-width: 100%;
+  }
+
+  .project-image {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .project-buttons {
+    flex-wrap: wrap;
+  }
+
+  .project-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+  }
+
+  .project-tags {
+    min-height: 2.5rem;
+    align-items: flex-start;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    height: auto;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .success-container {
+    padding: var(--spacing-xl) var(--spacing-md);
+    min-height: calc(100vh - 10rem);
+  }
+
+  .success-content {
+    gap: var(--spacing-lg);
+    max-width: 35rem;
+  }
+
+  .success-icon {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .success-icon img {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section-container {
+    padding: var(--spacing-md) var(--spacing-sm);
+  }
+
+  .section-container h1 {
+    font-size: var(--text-xl);
+  }
+
+  .section-container h2 {
+    font-size: var(--text-lg);
+  }
+
+  .menu-content {
+    justify-content: space-between;
+  }
+
+  /* Hero — Mobile pequeno */
+  .hero-container {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .hero-content {
+    gap: var(--spacing-xs);
+    width: 100%;
+    align-items: center;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .buttons-container {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .buttons-container .botao,
+  .buttons-container .botao-outline {
+    padding: 0.75rem 1rem;
+    font-size: var(--text-base);
+    white-space: nowrap;
+  }
+
+  .about-image img {
+    max-width: 16rem;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .contact-info {
+    width: 100%;
+  }
+
+  form {
+    width: 100%;
+  }
+}

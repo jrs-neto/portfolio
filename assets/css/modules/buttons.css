@@ -1,0 +1,79 @@
+.buttons-container {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.botao, .botao-outline {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border: 0.125rem solid transparent;
+  border-radius: var(--radius-md);
+  font-size: var(--text-base);
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition-default);
+}
+
+/* Botão Preenchido (Ver Currículo) - Primário */
+.botao {
+  border-color: var(--primary);
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+.botao:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+  box-shadow: none;
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+/* Botão Outline (GitHub) - Secundário */
+.botao-outline {
+  border-color: var(--border-color);
+  background-color: transparent;
+  color: var(--text-main);
+}
+
+.botao-outline:hover {
+  border-color: var(--border-hover);
+  background-color: var(--bg-hover-translucent);
+  color: var(--text-main);
+  transform: translateY(-2px);
+}
+
+/* Estados Adicionais de Acessibilidade e Interação */
+.botao:focus-visible, 
+.botao-outline:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.botao:active, 
+.botao-outline:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.botao:disabled, 
+.botao-outline:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+  background-color: var(--border-color) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-secondary) !important;
+}
+
+/* Classe para manter o alinhamento quando o botão de deploy não existir */
+.invisible-button {
+  visibility: hidden;
+  pointer-events: none; /* Impede cliques no elemento invisível */
+}
+
+/* Modificador de tamanho reduzido — usado nos botões dos cards de projeto */
+.botao-sm {
+  padding: 0.5rem 1.25rem;
+  font-size: var(--text-sm);
+}

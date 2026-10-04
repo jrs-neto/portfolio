@@ -1,0 +1,57 @@
+/* ==========================================================================
+   Reset & Fontes  - Tema Dark Slate & Obsidian
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif; 
+  text-decoration: none;
+  outline: none;
+}
+
+/* Variáveis de Tema - Modern Slate & Indigo SaaS Theme */
+:root {
+    /* Cores Principais */
+    --bg-main: #0F172A;         /* Background Principal */
+    --bg-secondary: #111827;    /* Background Secundário (Seções alternadas, header, footer) */
+    --bg-card: #1E293B;         /* Cards (Hero-card, Info-block, Project-card, Contact-pill) */
+    --border-color: #334155;    /* Borda Padrão */
+    --border-hover: #475569;    /* Borda no Hover */
+    --text-main: #F8FAFC;       /* Texto Principal */
+    --text-secondary: #94A3B8;  /* Texto Secundário */
+    
+    /* Destaques (Accent) */
+    --primary: #3B82F6;         /* Azul Destaque */
+    --primary-hover: #2563EB;   /* Azul Hover */
+
+    /* Efeitos e Estados Adicionais */
+    --bg-hover-translucent: rgba(148, 163, 184, 0.08); /* Fundo translúcido para botões secundários e hovers */
+    --error: #ef4444;           
+ 
+    /* Espaçamentos */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-2xl: 4rem;
+ 
+    /* Tamanhos de Fonte */
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.5rem;
+    --text-2xl: 2rem;
+    --text-3xl: 3rem;
+ 
+    /* Border Radius Moderno */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-full: 50%;
+ 
+    /* Animação Padrão Confortável */
+    --transition-default: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}

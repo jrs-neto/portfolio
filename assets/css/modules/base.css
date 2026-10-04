@@ -1,0 +1,44 @@
+/* Configurações Básicas */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--bg-main);
+  line-height: 1.5;
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+}
+
+/* Seções - Base Comum */
+
+.section-container {
+  width: 100%;
+  padding: var(--spacing-2xl) max(var(--spacing-md), calc(50% - 35rem));
+  scroll-margin-top: 2rem;
+}
+
+#hero, #projects { background-color: var(--bg-main); }
+#about, #contact { background-color: var(--bg-secondary); }
+
+/* Animação Flutuante */
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1.25rem);
+  }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}

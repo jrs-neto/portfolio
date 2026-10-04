@@ -1,0 +1,143 @@
+/* ==========================================================================
+   Seção Header - Cabeçalho e Menu
+   ========================================================================== */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 5rem;
+  border-bottom: 1px solid var(--border-color); /* Linha divisória fina e escura */
+  background-color: var(--bg-secondary); /* Fundo GitHub surface */
+  backdrop-filter: blur(12px); /* Efeito de vidro jateado (blur)  */
+  -webkit-backdrop-filter: blur(12px);
+}
+
+
+
+header a {
+  font-weight: 500;
+  color: var(--text-secondary); /* Links começam com um cinza sutil */
+  transition: var(--transition-default);
+  position: relative;
+}
+
+header a:hover {
+  color: var(--text-main); /* Fica branco fosco no hover */
+}
+
+/* Linha animada embaixo dos links do menu */
+header nav a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0%;
+  background: var(--primary); /* Linha guia em azul GitHub */
+  transition: width 0.25s ease;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+header nav a:hover::after {
+  width: 100%;
+}
+
+/* Bloco da Marca (Nome e Cargo) */
+.brand {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.15rem;
+}
+
+/* Nome do Portfólio */
+.brand-name {
+  font-size: 1.35rem;
+  font-weight: 800; 
+  color: var(--text-main) !important;
+  letter-spacing: -0.01em;
+  display: inline-block;
+}
+
+/* Cargo abaixo do nome */
+.header-role {
+  font-size: 0.725rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+header:hover .header-role {
+  color: var(--primary); 
+}
+
+/* Alinhamento do Menu */
+.menu-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 72rem;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.menu-list {
+  display: flex;
+  gap: var(--spacing-lg);
+  list-style: none;
+  align-items: center;
+}
+
+.menu-list a { 
+  padding: var(--spacing-xs) 0;
+}
+
+/* ===========================
+   Botão Hamburger (Mobile)
+   =========================== */
+
+/* Oculto por padrão no desktop */
+.menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.375rem;
+  background: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: var(--transition-default);
+  flex-shrink: 0;
+}
+
+.menu-toggle:hover {
+  border-color: var(--border-hover);
+  color: var(--text-main);
+  background-color: var(--bg-hover-translucent);
+}
+
+.menu-toggle:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.menu-toggle svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Alterna os ícones conforme o estado */
+.menu-toggle .icon-close   { display: none; }
+.menu-toggle .icon-hamburger { display: block; }
+
+.menu-toggle.is-open .icon-hamburger { display: none; }
+.menu-toggle.is-open .icon-close     { display: block; }
