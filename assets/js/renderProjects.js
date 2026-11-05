@@ -80,7 +80,7 @@ function createProjectContent(project, repository) {
       ? repository.description
       : null;
 
-  description.textContent = repoDescription || project.description || "Projeto desenvolvido por José Rodrigues.";
+  description.textContent = project.description || repository.description || "Projeto desenvolvido por José Rodrigues.";
 
   content.append(title, description, createTechnologies(project.technologies), createButtons(project, repository));
 
